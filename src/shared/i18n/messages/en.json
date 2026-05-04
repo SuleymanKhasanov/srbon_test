@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Sarbon — Cargo",
+    "subtitle": "Dispatcher dashboard"
+  },
+  "language": {
+    "label": "Language",
+    "ru": "Русский",
+    "uz": "Oʻzbekcha",
+    "en": "English"
+  },
+  "filters": {
+    "title": "Filters",
+    "openMobile": "Filters",
+    "apply": "Apply",
+    "reset": "Reset",
+    "search": "Search by name",
+    "status": "Status",
+    "truckType": "Truck type",
+    "fromCity": "From (city code)",
+    "toCity": "To (city code)",
+    "weightMin": "Weight from, t",
+    "weightMax": "Weight to, t",
+    "createdFrom": "Created from",
+    "createdTo": "Created to",
+    "withOffers": "Only with offers",
+    "any": "Any",
+    "anyStatus": "All statuses",
+    "sortLabel": "Sort",
+    "sortNewest": "Newest first",
+    "sortOldest": "Oldest first"
+  },
+  "table": {
+    "columns": {
+      "name": "Cargo",
+      "route": "Route",
+      "truck": "Truck",
+      "weight": "Weight / volume",
+      "price": "Price",
+      "status": "Status",
+      "created": "Created",
+      "markers": "Markers"
+    },
+    "ariaBusy": "Loading cargo",
+    "loadDate": "Pickup",
+    "unloadDate": "Drop-off",
+    "negotiable": "negotiable",
+    "vehiclesLeft": "vehicles left: {n}"
+  },
+  "states": {
+    "empty": {
+      "title": "No cargo found",
+      "description": "Try changing or clearing the filters.",
+      "reset": "Reset filters"
+    },
+    "error": {
+      "title": "Could not load cargo",
+      "description": "Please try again. If the error persists, refresh the token.",
+      "retry": "Retry",
+      "tokenExpiredTitle": "Token expired",
+      "tokenExpiredDescription": "The test dispatcher JWT has expired. Update SARBON_USER_TOKEN in .env.local and restart the dev server."
+    }
+  },
+  "pagination": {
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page {page} of {total}",
+    "limitLabel": "Per page",
+    "summary": "Showing {from}–{to} of {total}"
+  },
+  "detail": {
+    "title": "Cargo details",
+    "close": "Close",
+    "contact": "Contact",
+    "comment": "Comment",
+    "payment": "Payment",
+    "prepayment": "Prepayment",
+    "remaining": "Remaining",
+    "paymentNote": "Payment terms",
+    "route": "Route",
+    "vehicles": "Vehicles",
+    "vehiclesAmount": "Vehicles amount",
+    "vehiclesLeft": "Left",
+    "twoDrivers": "Two drivers required",
+    "adr": "ADR",
+    "temperature": "Temperature",
+    "cargoType": "Cargo type",
+    "shipmentType": "Shipment type",
+    "createdAt": "Created",
+    "updatedAt": "Updated"
+  },
+  "status": {
+    "SEARCHING_ALL": "Searching",
+    "SEARCHING": "Searching",
+    "IN_PROGRESS": "In progress",
+    "DELIVERED": "Delivered",
+    "CANCELLED": "Cancelled",
+    "MODERATION": "In moderation",
+    "DRAFT": "Draft"
+  },
+  "truckType": {
+    "TENT": "Tent",
+    "REFRIGERATOR": "Refrigerator",
+    "CONTAINER": "Container",
+    "ISOTHERMAL": "Isothermal",
+    "OPEN": "Open",
+    "FLATBED": "Flatbed"
+  },
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "negotiable": "Negotiable",
+    "weightUnit": "t",
+    "volumeUnit": "m³"
+  }
+}

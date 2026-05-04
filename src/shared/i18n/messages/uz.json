@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Sarbon — Yuklar",
+    "subtitle": "Dispetcher paneli"
+  },
+  "language": {
+    "label": "Til",
+    "ru": "Русский",
+    "uz": "Oʻzbekcha",
+    "en": "English"
+  },
+  "filters": {
+    "title": "Filtrlar",
+    "openMobile": "Filtrlar",
+    "apply": "Qoʻllash",
+    "reset": "Tozalash",
+    "search": "Nom boʻyicha qidiruv",
+    "status": "Status",
+    "truckType": "Transport turi",
+    "fromCity": "Qayerdan (shahar kodi)",
+    "toCity": "Qayerga (shahar kodi)",
+    "weightMin": "Ogʻirligi (dan), t",
+    "weightMax": "Ogʻirligi (gacha), t",
+    "createdFrom": "Yaratilgan (dan)",
+    "createdTo": "Yaratilgan (gacha)",
+    "withOffers": "Faqat takliflari bor",
+    "any": "Istalgan",
+    "anyStatus": "Barcha statuslar",
+    "sortLabel": "Saralash",
+    "sortNewest": "Avval yangilari",
+    "sortOldest": "Avval eskilari"
+  },
+  "table": {
+    "columns": {
+      "name": "Yuk",
+      "route": "Marshrut",
+      "truck": "Transport",
+      "weight": "Ogʻirligi / hajmi",
+      "price": "Narxi",
+      "status": "Status",
+      "created": "Yaratilgan",
+      "markers": "Belgilar"
+    },
+    "ariaBusy": "Yuklar yuklanmoqda",
+    "loadDate": "Yuklash",
+    "unloadDate": "Tushirish",
+    "negotiable": "kelishiladi",
+    "vehiclesLeft": "qolgan transport: {n}"
+  },
+  "states": {
+    "empty": {
+      "title": "Yuklar topilmadi",
+      "description": "Filtrlarni oʻzgartiring yoki tozalang.",
+      "reset": "Filtrlarni tozalash"
+    },
+    "error": {
+      "title": "Yuklarni yuklab boʻlmadi",
+      "description": "Qayta urinib koʻring. Xato takrorlansa — tokenni yangilang.",
+      "retry": "Qayta urinish",
+      "tokenExpiredTitle": "Token muddati tugagan",
+      "tokenExpiredDescription": "Test JWT muddati tugagan. .env.local-dagi SARBON_USER_TOKEN ni yangilang va dev-serverni qayta ishga tushiring."
+    }
+  },
+  "pagination": {
+    "prev": "Orqaga",
+    "next": "Keyingisi",
+    "page": "{page} sahifa / {total}",
+    "limitLabel": "Sahifada",
+    "summary": "{from}–{to} / {total} ko‘rsatilmoqda"
+  },
+  "detail": {
+    "title": "Yuk haqida batafsil",
+    "close": "Yopish",
+    "contact": "Aloqa",
+    "comment": "Izoh",
+    "payment": "Toʻlov",
+    "prepayment": "Avans",
+    "remaining": "Qoldiq",
+    "paymentNote": "Toʻlov shartlari",
+    "route": "Marshrut",
+    "vehicles": "Transport",
+    "vehiclesAmount": "Transport soni",
+    "vehiclesLeft": "Qolgan",
+    "twoDrivers": "2 haydovchi kerak",
+    "adr": "ADR",
+    "temperature": "Harorat",
+    "cargoType": "Yuk turi",
+    "shipmentType": "Joʻnatma turi",
+    "createdAt": "Yaratilgan",
+    "updatedAt": "Yangilangan"
+  },
+  "status": {
+    "SEARCHING_ALL": "Qidiruvda",
+    "SEARCHING": "Qidiruvda",
+    "IN_PROGRESS": "Yo‘lda",
+    "DELIVERED": "Yetkazildi",
+    "CANCELLED": "Bekor qilindi",
+    "MODERATION": "Moderatsiyada",
+    "DRAFT": "Qoralama"
+  },
+  "truckType": {
+    "TENT": "Tent",
+    "REFRIGERATOR": "Refrijerator",
+    "CONTAINER": "Konteyner",
+    "ISOTHERMAL": "Izoterm",
+    "OPEN": "Ochiq",
+    "FLATBED": "Maydonchali"
+  },
+  "common": {
+    "yes": "Ha",
+    "no": "Yoʻq",
+    "negotiable": "Kelishiladi",
+    "weightUnit": "t",
+    "volumeUnit": "m³"
+  }
+}

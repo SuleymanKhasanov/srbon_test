@@ -1,0 +1,116 @@
+{
+  "header": {
+    "title": "Sarbon — Грузы",
+    "subtitle": "Панель диспетчера"
+  },
+  "language": {
+    "label": "Язык",
+    "ru": "Русский",
+    "uz": "Oʻzbekcha",
+    "en": "English"
+  },
+  "filters": {
+    "title": "Фильтры",
+    "openMobile": "Фильтры",
+    "apply": "Применить",
+    "reset": "Сбросить",
+    "search": "Поиск по названию",
+    "status": "Статус",
+    "truckType": "Тип ТС",
+    "fromCity": "Откуда (код города)",
+    "toCity": "Куда (код города)",
+    "weightMin": "Вес от, т",
+    "weightMax": "Вес до, т",
+    "createdFrom": "Создано с",
+    "createdTo": "Создано по",
+    "withOffers": "Только с офферами",
+    "any": "Любой",
+    "anyStatus": "Все статусы",
+    "sortLabel": "Сортировка",
+    "sortNewest": "Сначала новые",
+    "sortOldest": "Сначала старые"
+  },
+  "table": {
+    "columns": {
+      "name": "Груз",
+      "route": "Маршрут",
+      "truck": "ТС",
+      "weight": "Вес / объём",
+      "price": "Цена",
+      "status": "Статус",
+      "created": "Создан",
+      "markers": "Метки"
+    },
+    "ariaBusy": "Загрузка грузов",
+    "loadDate": "Погрузка",
+    "unloadDate": "Выгрузка",
+    "negotiable": "торг",
+    "vehiclesLeft": "осталось ТС: {n}"
+  },
+  "states": {
+    "empty": {
+      "title": "Грузы не найдены",
+      "description": "Попробуйте изменить или сбросить фильтры.",
+      "reset": "Сбросить фильтры"
+    },
+    "error": {
+      "title": "Не удалось загрузить грузы",
+      "description": "Попробуйте ещё раз. Если ошибка повторяется — обновите токен.",
+      "retry": "Повторить",
+      "tokenExpiredTitle": "Токен истёк",
+      "tokenExpiredDescription": "Тестовый JWT диспетчера протух. Обновите SARBON_USER_TOKEN в .env.local и перезапустите dev-сервер."
+    }
+  },
+  "pagination": {
+    "prev": "Назад",
+    "next": "Далее",
+    "page": "Страница {page} из {total}",
+    "limitLabel": "На странице",
+    "summary": "Показано {from}–{to} из {total}"
+  },
+  "detail": {
+    "title": "Детали груза",
+    "close": "Закрыть",
+    "contact": "Контакт",
+    "comment": "Комментарий",
+    "payment": "Оплата",
+    "prepayment": "Аванс",
+    "remaining": "Остаток",
+    "paymentNote": "Условия оплаты",
+    "route": "Маршрут",
+    "vehicles": "ТС",
+    "vehiclesAmount": "Кол-во ТС",
+    "vehiclesLeft": "Осталось",
+    "twoDrivers": "Нужны 2 водителя",
+    "adr": "ADR",
+    "temperature": "Температура",
+    "cargoType": "Тип груза",
+    "shipmentType": "Тип отправки",
+    "createdAt": "Создан",
+    "updatedAt": "Обновлён"
+  },
+  "status": {
+    "SEARCHING_ALL": "В поиске",
+    "SEARCHING": "В поиске",
+    "IN_PROGRESS": "В пути",
+    "DELIVERED": "Доставлен",
+    "CANCELLED": "Отменён",
+    "MODERATION": "На модерации",
+    "DRAFT": "Черновик"
+  },
+  "truckType": {
+    "TENT": "Тент",
+    "REFRIGERATOR": "Рефрижератор",
+    "CONTAINER": "Контейнер",
+    "ISOTHERMAL": "Изотерм",
+    "OPEN": "Открытый",
+    "FLATBED": "Площадка"
+  },
+  "common": {
+    "yes": "Да",
+    "no": "Нет",
+    "negotiable": "Договорная",
+    "weightUnit": "т",
+    "volumeUnit": "м³"
+  }
+}

@@ -1,7 +1,11 @@
 import type { Cargo, CargoType, RoutePoint } from "../api/types";
 import type { Locale } from "@/shared/i18n/routing";
 
-export function localizeCargoTypeName(type: CargoType, locale: Locale): string {
+export function localizeCargoTypeName(
+  type: CargoType | null,
+  locale: Locale,
+): string {
+  if (!type) return "";
   switch (locale) {
     case "ru":
       return type.name_ru;

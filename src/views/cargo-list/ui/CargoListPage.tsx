@@ -12,7 +12,6 @@ import {
   CargoTable,
   CargoTableEmpty,
   CargoTableError,
-  CargoTableSkeleton,
 } from "@/widgets/cargo-table";
 import { useCargoList, type Cargo } from "@/entities/cargo";
 import {
@@ -48,38 +47,38 @@ export function CargoListPage() {
             <CargoTableError error={error} onRetry={resetErrorBoundary} />
           )}
         >
-          {query.isPending ? (
-            <CargoTableSkeleton />
-          ) : query.isError ? (
+          {query.isError ? (
             <CargoTableError
               error={query.error}
               onRetry={() => query.refetch()}
             />
-          ) : query.data && query.data.items.length === 0 ? (
+          ) : !query.isPending && query.data?.items.length === 0 ? (
             <CargoTableEmpty canReset={!filtersEmpty} />
-          ) : query.data ? (
+          ) : (
             <>
               <div className="hidden md:block">
                 <CargoTable
-                  items={query.data.items}
-                  isFetching={query.isFetching}
+                  items={query.data?.items ?? []}
+                  isFetching={query.isPending || query.isFetching}
                   onSelect={onSelect}
                 />
               </div>
               <div className="md:hidden">
                 <CargoCardList
-                  items={query.data.items}
+                  items={query.data?.items ?? []}
                   onSelect={onSelect}
-                  isFetching={query.isFetching}
+                  isFetching={query.isPending || query.isFetching}
                 />
               </div>
-              <CargoPagination
-                page={params.page ?? 1}
-                limit={params.limit ?? 20}
-                total={query.data.total}
-              />
+              {query.data && (
+                <CargoPagination
+                  page={params.page ?? 1}
+                  limit={params.limit ?? 20}
+                  total={query.data.total}
+                />
+              )}
             </>
-          ) : null}
+          )}
         </ErrorBoundary>
       </main>
 

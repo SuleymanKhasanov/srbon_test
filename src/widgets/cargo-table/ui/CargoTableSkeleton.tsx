@@ -1,36 +1,20 @@
 import { Skeleton } from "@/shared/ui/skeleton";
-import { Table, TableBody, TableCell, TableRow } from "@/shared/ui/table";
+import { TableCell, TableRow } from "@/shared/ui/table";
+
+const COL_WIDTHS = ["w-48", "w-40", "w-20", "w-24", "w-20", "w-24", "w-16"];
 
 export function CargoTableSkeleton({ rows = 8 }: { rows?: number }) {
   return (
-    <Table>
-      <TableBody>
-        {Array.from({ length: rows }).map((_, i) => (
-          <TableRow key={i} className="border-border">
-            <TableCell className="py-3">
-              <Skeleton className="h-4 w-48" />
+    <>
+      {Array.from({ length: rows }).map((_, i) => (
+        <TableRow key={i} className="border-border">
+          {COL_WIDTHS.map((w, j) => (
+            <TableCell key={j} className="py-3">
+              <Skeleton className={`h-4 ${w}`} />
             </TableCell>
-            <TableCell className="py-3">
-              <Skeleton className="h-4 w-40" />
-            </TableCell>
-            <TableCell className="py-3">
-              <Skeleton className="h-5 w-20" />
-            </TableCell>
-            <TableCell className="py-3">
-              <Skeleton className="h-4 w-24" />
-            </TableCell>
-            <TableCell className="py-3">
-              <Skeleton className="h-4 w-20" />
-            </TableCell>
-            <TableCell className="py-3">
-              <Skeleton className="h-5 w-24" />
-            </TableCell>
-            <TableCell className="py-3">
-              <Skeleton className="h-4 w-16" />
-            </TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+          ))}
+        </TableRow>
+      ))}
+    </>
   );
 }

@@ -87,7 +87,7 @@ export type Cargo = {
   comment: string | null;
   contact_name: string | null;
   contact_phone: string | null;
-  cargo_type: CargoType;
+  cargo_type: CargoType | null;
   status: CargoStatus;
   shipment_type: ShipmentType | null;
   truck_type: TruckType | null;
@@ -112,7 +112,7 @@ export type Cargo = {
   documents: Record<string, unknown> | null;
   payment: Payment;
   route_points: RoutePoint[];
-  way_points: RoutePoint[];
+  way_points: Record<string, unknown>[];
   created_at: string;
   updated_at: string;
   created_by_id: string | null;

@@ -35,11 +35,11 @@ export async function fetchCargoList(
   signal?: AbortSignal,
 ): Promise<CargoListData> {
   const qs = buildQuery(params);
-  const res = await fetch(`${APP_API_ROUTES.cargo}${qs ? `?${qs}` : ""}`, {
+  const url = `${APP_API_ROUTES.cargo}${qs ? `?${qs}` : ""}`;
+  const res = await fetch(url, {
     signal,
     headers: { Accept: "application/json" },
   });
-
   const json = await res.json().catch(() => null);
 
   if (!res.ok) {
@@ -60,6 +60,14 @@ export async function fetchCargoList(
 
   const parsed = cargoListResponseSchema.safeParse(json);
   if (!parsed.success) {
+    if (process.env.NODE_ENV !== "production") {
+      console.error(
+        "[cargoApi] Zod parse failed",
+        parsed.error.issues,
+        "first item:",
+        json?.data?.items?.[0],
+      );
+    }
     throw new CargoApiError(200, "PARSE", parsed.error.message);
   }
   return parsed.data.data;

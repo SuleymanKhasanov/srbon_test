@@ -18,6 +18,7 @@ import {
   CargoPriceCell,
   CargoRouteCell,
   CargoStatusBadge,
+  localizeCargoTypeName,
   type Cargo,
 } from "@/entities/cargo";
 
@@ -94,10 +95,11 @@ export function CargoTable({ items, isFetching = false, onSelect }: Props) {
                           <div className="font-semibold leading-tight">
                             {cargo.name}
                           </div>
-                          <div className="mt-0.5 line-clamp-1 text-xs text-muted-foreground">
-                            {cargo.cargo_type[`name_${locale}` as const] ??
-                                cargo.cargo_type.name_en}
-                          </div>
+                          {cargo.cargo_type && (
+                            <div className="mt-0.5 line-clamp-1 text-xs text-muted-foreground">
+                              {localizeCargoTypeName(cargo.cargo_type, locale)}
+                            </div>
+                          )}
                         </TableCell>
                         <TableCell className="py-3 align-top">
                           <CargoRouteCell cargo={cargo} />
